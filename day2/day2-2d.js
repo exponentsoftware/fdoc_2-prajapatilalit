@@ -44,12 +44,12 @@ const users = [
 ];
 
 const userName = "Martha";
-//Add skills if user is  present
-function addSkills(userData) {
+//edit user data if user is  present
+function editUser(userData) {
   const findUser = userData.find((user) =>
-    user.name === userName ? user.skills.push("Reactjs") : ""
+    user.name === userName ? (user.age = 21) : ""
   );
-  //log find user data after adding
+  //log find user data after editing
   console.log(findUser);
 }
-addSkills(users);
+editUser(users);
