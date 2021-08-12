@@ -11,16 +11,21 @@ const countries = [
   "JAPAN",
   "KENYA",
 ];
-createArrayOfArrays(countries)[
-  (["Albania", "ALB", 7],
-  ["Bolivia", "BOL", 7],
-  ["Canada", "CAN", 6],
-  ["Denmark", "DEN", 7],
-  ["Ethiopia", "ETH", 8],
-  ["Finland", "FIN", 7],
-  ["Germany", "GER", 7],
-  ["Hungary", "HUN", 7],
-  ["Ireland", "IRE", 7],
-  ["Japan", "JAP", 5],
-  ["Kenya", "KEN", 5])
-];
+
+//createArrayOfArrays
+
+function makeList(countriesArray) {
+  const createArrayOfArrays = [];
+  for (let i = 0; i < countriesArray.length; i++) {
+    let arrVal = countriesArray[i].toLowerCase();
+
+    createArrayOfArrays.push([
+      arrVal.charAt(0).toUpperCase() + arrVal.slice(1),
+      arrVal.substring(0, 3).toUpperCase(),
+      arrVal.length,
+    ]);
+  }
+  return console.log(createArrayOfArrays);
+}
+
+makeList(countries);
