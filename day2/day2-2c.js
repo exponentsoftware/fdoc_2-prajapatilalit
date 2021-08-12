@@ -47,7 +47,7 @@ const userName = "Martha";
 //Add skills if user is  present
 function addSkills(userData) {
   const findUser = userData.find((user) =>
-    user.name === userName ? user.skills.push("Reactjs") : ""
+    user.name === userName ? user.skills.push("Bootstrap") : ""
   );
   //log find user data after adding
   console.log(findUser);

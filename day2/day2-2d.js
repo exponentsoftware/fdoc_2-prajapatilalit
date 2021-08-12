@@ -47,7 +47,7 @@ const userName = "Martha";
 //edit user data if user is  present
 function editUser(userData) {
   const findUser = userData.find((user) =>
-    user.name === userName ? (user.age = 21) : ""
+    user.name === userName ? (user.age = 23) : ""
   );
   //log find user data after editing
   console.log(findUser);
